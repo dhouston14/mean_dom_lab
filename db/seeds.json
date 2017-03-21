@@ -1,0 +1,22 @@
+[
+  {
+    "car": "Audi A8",
+    "car_url": "http://bit.ly/2nONhkZ",
+    "car_desc": "Luxury car for those who enjoy comfortable speed and nice seats"
+  },
+  {
+    "car": "Bentley Bentayga",
+    "car_url": "http://bit.ly/2nGXPpz",
+    "car_desc": "For when you want to stand out from the rest of them."
+  },
+  {
+    "car": "Koenigsegg",
+    "car_url": "http://bit.ly/2nH1CD0",
+    "car_desc": "Fastest car on the market! Simply Beautiful..."
+  },
+  {
+    "car": "Bugatti",
+    "car_url": "http://bit.ly/2n4iwbS",
+    "car_desc": "Fast Car! Must Have!"
+  }
+]
