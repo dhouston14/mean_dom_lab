@@ -38,8 +38,12 @@ angular
     }
 
   function CarFactoryFunction($resource) {
-  return $resource("/api/cars/:name", {}, {
-    update: {method: "PUT"}
+  return $resource("/api/cars/:car", {}, {
+    update: {method: "PUT"},
+    query: { method: "GET", params: {}, isArray: true },
+    get: { method: "GET", params: {}, isArray: false },
+    create: {method: "POST", params: {}
+    }
   });
 }
 
@@ -47,7 +51,6 @@ function CarIndexControllerFunction(CarFactory) {
   this.cars = CarFactory.query()
 }
 
-
 function CarShowControllerFunction(CarFactory, $stateParams) {
-    this.car = CarFactory.get({car: $stateParams.car})
-  }
+  this.car = CarFactory.get({car: $stateParams.car})
+}

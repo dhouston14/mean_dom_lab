@@ -37,6 +37,12 @@ app.get("/api/cars/:car", function(req, res) {
   });
 });
 
+app.post("/api/cars", function(req, res){
+  Car.create(req.body.car).then(function(car){
+    res.json(car);
+  });
+});
+
 app.listen(app.get("port"), () => {
   console.log("The Mean Dom App is Connected");
 });
