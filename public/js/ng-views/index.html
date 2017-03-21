@@ -1,0 +1,15 @@
+<h2>All Cars</h2>
+
+<div data-ng-repeat="type in vm.cars">
+  <h4><a data-ui-sref="show({car: type.car})"> The {{type.car}}</a>  - {{type.car_desc}}</h4>
+    <img src="{{type.car_url}}">
+  <!-- <p>{{person.year}}</p> -->
+</div>
+<br>
+
+<form>
+  <input type="text" placholder="Car" data-ng-model="vm.type.car"/> Car Type<br>
+  <input type="text" placholder="Car Url" data-ng-model="vm.type.car_url"/> Car Url<br>
+  <input type="text" placholder="Description" data-ng-model="vm.type.car_desc"/> Description<br>
+<button type="button" data-ng-click="vm.create()"> Add New Car </button>
+</form>
