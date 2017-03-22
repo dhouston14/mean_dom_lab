@@ -1,7 +1,18 @@
 <h2>Show Car</h2>
 
-<h4>{{type.car}}</h4>
+<button type="button" data-ui-sref="index">Back to Index</button>
+
+<!-- <button type="button" data->Delete</button><br> -->
+<button type="submit" data-ui-sref="index" data-ng-click="vm.destroy()">Delete Car </button>
+<h4>{{vm.car.car}}</h4>
 <h4><img src="{{vm.car.car_url}}"></h4>
 <h4>{{vm.car.car_desc}}</h4>
 
 <h1>{{vm.cars.car}}</h1>
+
+<form data-ng-submit="vm.update()">
+  <input type="text" placholder="Car" data-ng-model="vm.car.car"/> => Car Type <br>
+  <input type="text" placholder="Car Url" data-ng-model="vm.car.car_url"/> => Car Url <br>
+  <input type="text" placholder="Description" data-ng-model="vm.car.car_desc"/> => Description <br>
+<button type="submit">Update Car </button>
+</form>
