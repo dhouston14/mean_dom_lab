@@ -10,9 +10,9 @@
 
 <h1>{{vm.cars.car}}</h1>
 
-<form data-ng-submit="vm.update()">
+<form>
   <input type="text" placholder="Car" data-ng-model="vm.car.car"/> => Car Type <br>
   <input type="text" placholder="Car Url" data-ng-model="vm.car.car_url"/> => Car Url <br>
   <input type="text" placholder="Description" data-ng-model="vm.car.car_desc"/> => Description <br>
-<button type="submit">Update Car </button>
+<button data-ui-sref="show" data-ng-click="vm.update()" type="submit">Update Car</button>
 </form>

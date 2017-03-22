@@ -57,7 +57,8 @@ app.delete("/api/cars/:car", function(req, res){
 
 // change app.post to app.put for UPDATE
 app.put("/api/cars/:car", function(req, res){
-  Car.findOneAndUpdate({car: req.params.car}, req.body.car, {new: true}).then(function(car){
+  Car.findOneAndUpdate({car: req.params.car}, req.body, {new: true}).then(function(car){
+    res.json(car);
     res.json({success: true});
     // res.redirect("/candidates/" + candidate.name);
   });

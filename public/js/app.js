@@ -80,7 +80,7 @@ function CarShowControllerFunction(CarFactory, $stateParams, $state) {
   this.car = CarFactory.get({car: $stateParams.car})
   this.update = function() {
     this.car.$update({car: $stateParams.car}).then(function() {
-      $state.go("index")
+      $state.go("index");
     })
   }
   this.destroy = function() {
@@ -100,9 +100,9 @@ function CarNewControllerFunction(CarFactory, $state) {
 }
 // function CarEditControllerFunction(CarFactory, $state, $stateParams) {
 //   this.car = new CarFactory();
-//   this.create = function() {
-//     this.car.$save(function(car) {
-//       $state.go("index", {car: car.car})
+//   this.update = function() {
+//     this.car.$update({car: $stateParams.car}).then(function() {
+//       $state.go("index");
 //     })
 //   }
 // }
